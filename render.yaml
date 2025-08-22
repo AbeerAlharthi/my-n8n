@@ -3,6 +3,7 @@ services:
     name: n8n
     env: docker
     plan: free
+    dockerfilePath: ./Dockerfile
     envVars:
       - key: N8N_HOST
         value: 0.0.0.0
@@ -10,5 +11,4 @@ services:
         value: 5678
       - key: WEBHOOK_URL
         value: https://n8n.onrender.com/
-    docker:
-      image: n8nio/n8n:latest
+
